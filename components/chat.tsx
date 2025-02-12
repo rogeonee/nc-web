@@ -8,7 +8,6 @@ import { readStreamableValue } from 'ai/rsc';
 import { Input } from '@/components/ui/input';
 import { Button } from '@/components/ui/button';
 import { IconArrowUp } from '@/components/ui/icons';
-import Link from 'next/link';
 import AboutCard from '@/components/cards/aboutcard';
 export const maxDuration = 30;
 
@@ -71,13 +70,6 @@ export default function Chat() {
                   <IconArrowUp />
                 </Button>
               </div>
-              {messages.length > 1 && (
-                <div className="text-center">
-                  <Link href="/genui" className="text-xs text-blue-400">
-                    Try GenUI and streaming components &rarr;
-                  </Link>
-                </div>
-              )}
             </form>
           </Card>
         </div>
