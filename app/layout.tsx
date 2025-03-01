@@ -1,13 +1,12 @@
 import type { Metadata } from 'next';
 import { Toaster } from 'sonner';
 import { ThemeProvider } from '@/components/theme-provider';
-import { Header } from '@/components/header';
+import Header from '@/components/header';
 import './globals.css';
 
 export const metadata: Metadata = {
-  metadataBase: new URL('https://chat.vercel.ai'),
-  title: 'Next.js Chatbot Template',
-  description: 'Next.js chatbot template using the AI SDK.',
+  title: 'Nyusha Chat',
+  description: 'Тестовый чат с Gemini Flash 2.0',
 };
 
 export const viewport = {

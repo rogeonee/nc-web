@@ -44,7 +44,11 @@ export default function Chat() {
           {messages.map((message, index) => (
             <div key={index} className="whitespace-pre-wrap flex mb-5">
               <div
-                className={`${message.role === 'user' ? 'bg-slate-200 ml-auto' : 'bg-transparent'} p-2 rounded-lg`}
+                className={`${
+                  message.role === 'user'
+                    ? 'bg-secondary ml-auto'
+                    : 'bg-transparent'
+                } p-2 rounded-lg`}
               >
                 {message.content as string}
               </div>
@@ -63,8 +67,8 @@ export default function Chat() {
                   onChange={(event) => {
                     setInput(event.target.value);
                   }}
-                  className="w-[95%] mr-2 border-0 ring-offset-0 focus-visible:ring-0 focus-visible:outline-none focus:outline-none focus:ring-0 ring-0 focus-visible:border-none border-transparent focus:border-transparent focus-visible:ring-none"
-                  placeholder="Ask me anything..."
+                  className="flex h-10 rounded-md border border-input bg-background px-3 py-2 text-sm ring-offset-background file:border-0 file:bg-transparent file:text-sm file:font-medium placeholder:text-muted-foreground disabled:cursor-not-allowed disabled:opacity-50 w-[95%] mr-2 border-0 focus:ring-0 focus:ring-offset-0 focus-visible:ring-0 focus-visible:ring-offset-0 focus-visible:outline-none shadow-none"
+                  placeholder="Спроси что-нибудь..."
                 />
                 <Button disabled={!input.trim()}>
                   <IconArrowUp />
