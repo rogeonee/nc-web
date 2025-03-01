@@ -30,7 +30,8 @@ export async function continueConversation(history: Message[]) {
 
   const { text, toolResults } = await generateText({
     model: google('gemini-2.0-flash-001'),
-    system: 'You are a friendly coding assistant!',
+    system:
+      'Ты Gemini 2.0 Flash, ассистент готовый помочь с ежедневными вопросами и задачами.',
     messages: history,
   });
 
